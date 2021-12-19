@@ -38,7 +38,7 @@ args = vars(ap.parse_args())
 # initialize the initial learning rate, number of epochs to train for,
 # and batch size
 INIT_LR = 1e-4
-EPOCHS = 20
+EPOCHS = 2
 BS = 32
 
 # grab the list of images in our dataset directory, then initialize
@@ -67,7 +67,7 @@ data = np.array(data, dtype="float32")
 labels = np.array(labels)
 
 # perform one-hot encoding on the labels
-lb = LabelBinarizer()
+lb = LabelBinarizer() #creates a binary labels for class or no class
 labels = lb.fit_transform(labels)
 labels = to_categorical(labels)
 
